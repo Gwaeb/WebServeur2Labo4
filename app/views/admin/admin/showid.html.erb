@@ -1,0 +1,13 @@
+<% # Gabriel Meunier 10/11/2021 %>
+<h1>Admin - <%= @recette.titre %></h1>
+<h3>Par: <%= @recette.user.nom %> <%= @recette.user.prenom %></h3>
+<P>Détails:</p>
+<ul>
+    <li>Recette id: <%= @recette.id %></li>
+    <li>User id: <%= @recette.user_id %></li>
+    <li>Titre: <%= @recette.titre %></li>
+    <li>Étapes: <%= @recette.etapes %></li>
+    <li>Date de création: <%= @recette.created_at %></li>
+    <li>Date de la dernière modification: <%= @recette.updated_at %></li>
+    <li>Nombre d'ingrdients: <%= @recette.ingredients.count %></li>
+</ul>

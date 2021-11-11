@@ -1,0 +1,16 @@
+<% # Gabriel Meunier 10/11/2021 %>
+<h1><%= @recette.titre %></h1>
+
+<h3>Les ingrédients:</h3>
+
+<ul>
+  <% for i in 0..@ingredients.length-1 %>
+    <li>
+      <%=@recette_ingredients[i].quantite%> <%= @recette_ingredients[i].unite%> <%= @ingredients[i].nom%>
+    </li>
+  <% end %>
+</ul>
+
+
+
+<p><%= @recette.etapes %></p>

@@ -1,0 +1,19 @@
+<% # Gabriel Meunier 10/11/2021 %>
+<%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+<h1>Admin</h1>
+<ul>
+  <% @users.each do |user| %>
+    <% if user.recettes.length != 0 %>
+      <li>
+        <%= user.nom %> <%= user.prenom %>
+        <ol>
+          <% user.recettes.each do |recette| %>
+            <li>
+              <a target=_blank href=recettes/<%= recette.id %>><%= recette.titre %></a>
+            </li>
+          <% end %>
+        </ol>
+      </li>
+    <% end %>
+  <% end %>
+</ul>  
