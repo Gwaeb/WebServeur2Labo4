@@ -6,7 +6,7 @@
     <ul>
         <% current_user.recettes.each do |recette| %>
         <li>
-            <a target=_blank href=mesrecettes/<%= recette.id %>/><%= recette.titre %></a>
+            <a target=_blank href="mesrecettes/<%= recette.id %>"><%= recette.titre %></a>
         </li>
         <% end %>
     </ul>
